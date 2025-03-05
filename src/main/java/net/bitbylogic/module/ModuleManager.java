@@ -36,6 +36,11 @@ public class ModuleManager {
                 .suggestionProviders(providers -> {
                     providers.addProvider(BitsModule.class, context -> getModules().keySet());
                 })
+                .parameterTypes(types -> types.addParameterType(BitsModule.class, (input, ctx) -> {
+                        String moduleId = input.readString();
+                        return getModuleByID(moduleId).orElseThrow(() -> new IllegalStateException("Module not found: " + moduleId));
+                    }
+                ))
                 .build();
 
         this.modules = new HashMap<>();

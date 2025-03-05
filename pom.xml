@@ -50,6 +50,11 @@
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <!-- JitPack -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <distributionManagement>
@@ -87,16 +92,16 @@
 
         <!-- Bit's Utils -->
         <dependency>
-            <groupId>net.bitbylogic</groupId>
+            <groupId>com.github.BitByLogics.Bits-Utils</groupId>
             <artifactId>bits-utils-common</artifactId>
-            <version>2024.12</version>
+            <version>1.0.0</version>
         </dependency>
 
         <!-- Bit's Utils Bukkit -->
         <dependency>
-            <groupId>net.bitbylogic</groupId>
+            <groupId>com.github.BitByLogics.Bits-Utils</groupId>
             <artifactId>bits-utils-bukkit</artifactId>
-            <version>2024.12</version>
+            <version>1.0.0</version>
         </dependency>
 
         <!-- Lamp Common -->
